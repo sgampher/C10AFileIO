@@ -1,3 +1,4 @@
+package defaultPackage;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -13,19 +14,14 @@ public class ScoreTrakker {
      * then stores student objects in the studentlist ArrayList.
 
      */
-    public void loadDataFile(String inFile) {
+    public void loadDataFile(String inFile) throws FileNotFoundException {
         FileReader reader = null;
         Scanner in = null;
-        try {
-            reader = new FileReader(inFile);
-            in = new Scanner(reader);
-        } catch (FileNotFoundException e) {
-            System.out.println("Can't open file: " + inFile);
-            return; 
-        }
-
+        reader = new FileReader(inFile);
+        in = new Scanner(reader);
         String name = "";
         String scoreStr = "";
+        
         while (in.hasNext()) {
             try {
                 name = in.nextLine();
@@ -55,14 +51,18 @@ public class ScoreTrakker {
      * processFiles: loops through all files in the filelist array.
      */
     public void processFiles() {
-        for (String file : filelist) {
-            studentlist.clear();
-            loadDataFile(file);
-            if (!studentlist.isEmpty()) {
-                printInOrder();
-                System.out.println();
-            }
-        }
+    	for (String file : filelist) {
+    		try {
+	    		studentlist.clear();
+	            loadDataFile(file);
+	            if (!studentlist.isEmpty()) {
+	                printInOrder();
+	                System.out.println();
+	            }
+    		} catch(FileNotFoundException e) {
+               System.out.println("Can't open file: " + file);
+    		}
+         }
     }
 
     public static void main(String[] args) {
