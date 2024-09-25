@@ -1,0 +1,30 @@
+commit 65a27e8245ac5532818b65b57b0bdd61e3af0618
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 25 14:27:44 2024 -0600
+
+    Eclipse defaultPackage error
+
+commit c048c40d8115dcbdeed01aa60cb2eda7b72818b2
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 25 14:23:27 2024 -0600
+
+    FileNotFoundEception should be handled by process
+    Files. loadDataFile needs a throws clause
+
+commit ee761783787e7eb3f5f1b89fe3a7f0be69b8e591
+Author: Robery Davis <rob2davis2@gmail.com>
+Date:   Wed Sep 25 13:57:03 2024 -0600
+
+    Added README
+
+commit db6d105fb2a290bab74eb05b91f70f888f055a91
+Author: sgampher <saragampher@gmail.com>
+Date:   Wed Sep 25 03:58:18 2024 -0600
+
+    project implementation
+
+commit 8661457d4da5862b8191585b86638a17f5073c04
+Author: sgampher <saragampher@gmail.com>
+Date:   Wed Sep 25 02:59:42 2024 -0600
+
+    Initial commit
